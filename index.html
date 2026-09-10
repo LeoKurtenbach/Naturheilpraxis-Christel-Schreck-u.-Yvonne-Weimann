@@ -130,8 +130,8 @@ nav.scrolled { box-shadow: 0 4px 28px rgba(21,18,16,0.10); }
 .hero-overline { font-size: clamp(0.7rem, 1vw, 0.8rem); letter-spacing: 0.22em; text-transform: uppercase; color: var(--rose); margin-bottom: 1.75rem; display: block; font-weight: 500; }
 .hero-headline {
   font-family: var(--font-serif);
-  font-size: clamp(2.75rem, 7vw, 6.5rem);
-  font-weight: 400; line-height: 1.08; letter-spacing: -0.02em;
+  font-size: clamp(2.4rem, 3.8vw, 4.5rem);
+  font-weight: 400; line-height: 1.1; letter-spacing: -0.02em;
   color: var(--white); margin-bottom: 1.75rem;
   text-shadow: 0 2px 8px rgba(0,0,0,0.45), 0 8px 40px rgba(0,0,0,0.25);
 }
@@ -169,8 +169,8 @@ section { padding: clamp(4rem, 10vw, 9rem) clamp(1.5rem, 5vw, 5rem); }
 .section-overline { font-size: clamp(0.68rem, 1vw, 0.75rem); letter-spacing: 0.22em; text-transform: uppercase; color: var(--rose); font-weight: 500; margin-bottom: 1.5rem; display: block; }
 .section-title {
   font-family: var(--font-serif);
-  font-size: clamp(2rem, 5vw, 4rem);
-  font-weight: 400; line-height: 1.1; letter-spacing: -0.01em;
+  font-size: clamp(1.8rem, 2.8vw, 3.2rem);
+  font-weight: 400; line-height: 1.12; letter-spacing: -0.01em;
   color: var(--deep); margin-bottom: 1.75rem;
   text-shadow: 0 1px 4px rgba(21,18,16,0.07);
 }
@@ -209,7 +209,7 @@ section { padding: clamp(4rem, 10vw, 9rem) clamp(1.5rem, 5vw, 5rem); }
 .behandlung-list li::before { content: ''; position: absolute; left: 0; top: 0.62em; width: 5px; height: 5px; border-radius: 50%; background: var(--rose); }
 
 /* ── Fastenkurse ── */
-#fastenkurse { position: relative; background-image: url('https://images.unsplash.com/photo-1542273917363-3b1817f69a2d?w=1600&q=80'); background-size: cover; background-position: center; background-attachment: fixed; }
+#fastenkurse { position: relative; background-image: url('https://images.unsplash.com/photo-1542273917363-3b1817f69a2d?w=1600&q=80'); background-size: cover; background-position: center; }
 #fastenkurse::before { content: ''; position: absolute; inset: 0; background: rgba(18,10,28,0.84); z-index: 0; }
 .fastenkurse-content { position: relative; z-index: 1; max-width: 720px; }
 .fastenkurse-content .section-title { color: var(--white); text-shadow: 0 2px 16px rgba(0,0,0,0.35); }
@@ -279,7 +279,6 @@ footer { background: #0E0818; padding: 2.5rem clamp(1.5rem, 5vw, 5rem); display:
   .team-grid, .kontakt-grid, .behandlung-intro { grid-template-columns: 1fr; gap: 1.25rem; }
   .behandlung-grid { grid-template-columns: repeat(2, 1fr); }
   footer { flex-direction: column; gap: 1.25rem; text-align: center; }
-  #fastenkurse { background-attachment: scroll; }
 }
 
 /* ── Breakpoint 480px ── */
@@ -533,9 +532,6 @@ mm.add('(prefers-reduced-motion: no-preference)', () => {
     .fromTo('.hero-sub',      { y: 24, opacity: 0 }, { y: 0, opacity: 1, duration: 1.0, ease: 'power3.out' }, '-=0.85')
     .fromTo('.hero-quote',    { y: 20, opacity: 0 }, { y: 0, opacity: 1, duration: 1.0, ease: 'power3.out' }, '-=0.80')
     .fromTo('.hero-actions',  { y: 18, opacity: 0 }, { y: 0, opacity: 1, duration: 0.9, ease: 'power3.out' }, '-=0.75');
-
-  /* Hero parallax */
-  gsap.to('#hero', { backgroundPositionY: '60%', ease: 'none', scrollTrigger: { trigger: '#hero', start: 'top top', end: 'bottom top', scrub: 1 }});
 
   /* Section titles */
   document.querySelectorAll('.gsap-fade').forEach(el => {
