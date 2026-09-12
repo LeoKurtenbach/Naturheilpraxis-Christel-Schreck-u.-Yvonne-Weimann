@@ -32,13 +32,26 @@ html { scroll-behavior: smooth; }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 :focus-visible { outline: 2px solid var(--rose); outline-offset: 3px; }
 
+/* ── Fixed backgrounds ── */
+#bgForest, #bgCity {
+  position: fixed; inset: 0; z-index: -2; pointer-events: none;
+}
+#bgForest {
+  background-image: url('https://images.unsplash.com/photo-1448375240586-882707db888b?w=1920&q=85');
+  background-size: cover; background-position: center;
+}
+#bgCity {
+  z-index: -1;
+  background-image: url('https://cdn.pixabay.com/photo/2017/05/27/13/00/hall-2348421_1280.jpg');
+  background-size: cover; background-position: center;
+  -webkit-mask-image: linear-gradient(to right, transparent 45%, black 66.67%);
+  mask-image: linear-gradient(to right, transparent 45%, black 66.67%);
+}
+@media (max-width: 900px) { #bgCity { display: none; } }
+
 /* ── Base ── */
 body {
   background-color: var(--deep);
-  background-image: url('https://images.unsplash.com/photo-1448375240586-882707db888b?w=1920&q=85');
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
   color: var(--deep);
   font-family: var(--font-sans);
   font-weight: 400;
@@ -333,7 +346,6 @@ footer { background: #0E0818; padding: 2.5rem clamp(1.5rem, 5vw, 5rem); display:
 
 /* ── Breakpoint 768px ── */
 @media (max-width: 768px) {
-  body { background-attachment: scroll; }
   .nav-links { display: none; }
   .nav-hamburger { display: flex; }
   .hero-actions { flex-direction: column; align-items: flex-start; width: 100%; gap: 1rem; }
@@ -355,6 +367,8 @@ footer { background: #0E0818; padding: 2.5rem clamp(1.5rem, 5vw, 5rem); display:
 </style>
 </head>
 <body>
+<div id="bgForest" aria-hidden="true"></div>
+<div id="bgCity" aria-hidden="true"></div>
 <div class="progress-bar" id="progressBar"></div>
 
 <nav id="mainNav">
