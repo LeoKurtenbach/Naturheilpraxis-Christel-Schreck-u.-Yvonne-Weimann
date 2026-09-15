@@ -33,19 +33,18 @@ html { scroll-behavior: smooth; }
 :focus-visible { outline: 2px solid var(--rose); outline-offset: 3px; }
 
 /* ── Fixed backgrounds ── */
-#bgForest, #bgCity {
-  position: fixed; inset: 0; z-index: -2; pointer-events: none;
-}
 #bgForest {
+  position: fixed; inset: 0; z-index: -2; pointer-events: none;
   background-image: url('https://images.unsplash.com/photo-1448375240586-882707db888b?w=1920&q=85');
   background-size: cover; background-position: center;
 }
 #bgCity {
-  z-index: -1;
+  position: fixed; top: 0; bottom: 0; right: 0; left: 68%; z-index: -1; pointer-events: none;
   background-image: url('https://cdn.pixabay.com/photo/2017/05/27/13/00/hall-2348421_1280.jpg');
-  background-size: cover; background-position: left center;
-  -webkit-mask-image: linear-gradient(to right, transparent 44%, black 59%, black 67%, transparent 72%);
-  mask-image: linear-gradient(to right, transparent 44%, black 59%, black 67%, transparent 72%);
+  background-size: 333% auto;
+  background-position: 50% center;
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 18%, black 92%, transparent 100%);
+  mask-image: linear-gradient(to right, transparent 0%, black 18%, black 92%, transparent 100%);
 }
 @media (max-width: 900px) { #bgCity { display: none; } }
 
