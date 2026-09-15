@@ -43,9 +43,9 @@ html { scroll-behavior: smooth; }
 #bgCity {
   z-index: -1;
   background-image: url('https://cdn.pixabay.com/photo/2017/05/27/13/00/hall-2348421_1280.jpg');
-  background-size: 150% auto; background-position: left center;
-  -webkit-mask-image: linear-gradient(to right, transparent 62%, black 80%);
-  mask-image: linear-gradient(to right, transparent 62%, black 80%);
+  background-size: 148% auto; background-position: left center;
+  -webkit-mask-image: linear-gradient(to right, transparent 48%, black 67%);
+  mask-image: linear-gradient(to right, transparent 48%, black 67%);
 }
 @media (max-width: 900px) { #bgCity { display: none; } }
 
@@ -250,7 +250,7 @@ section > * { position: relative; z-index: 1; }
 #behandlungen .section-title { color: var(--white); }
 #behandlungen .section-body { color: rgba(255,255,255,0.82); }
 .behandlung-intro { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(2rem, 4vw, 4rem); align-items: start; margin-bottom: clamp(2.5rem, 4vw, 4rem); }
-.behandlung-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(1rem, 1.5vw, 1.5rem); }
+.behandlung-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: clamp(1rem, 1.5vw, 1.5rem); }
 .behandlung-card {
   padding: clamp(2rem, 2.8vw, 2.75rem) clamp(1.75rem, 2.2vw, 2.25rem);
   background: rgba(255,255,255,0.05);
@@ -321,7 +321,6 @@ footer { background: #0E0818; padding: 2.5rem clamp(1.5rem, 5vw, 5rem); display:
 
 /* ── Breakpoint 1024px ── */
 @media (max-width: 1024px) {
-  .behandlung-grid { grid-template-columns: repeat(2, 1fr); }
   .kontakt-grid { gap: clamp(2rem, 4vw, 3rem); }
 }
 
@@ -334,7 +333,7 @@ footer { background: #0E0818; padding: 2.5rem clamp(1.5rem, 5vw, 5rem); display:
   .hero-tags { justify-content: flex-start; padding-top: 1.25rem; }
   .tag { font-size: 0.82rem; }
   .team-grid, .kontakt-grid, .behandlung-intro { grid-template-columns: 1fr; gap: 1.25rem; }
-  .behandlung-grid { grid-template-columns: repeat(2, 1fr); }
+  .behandlung-grid { grid-template-columns: 1fr; }
   footer { flex-direction: column; gap: 1.25rem; text-align: center; }
 }
 
@@ -471,20 +470,6 @@ footer { background: #0E0818; padding: 2.5rem clamp(1.5rem, 5vw, 5rem); display:
         <li>Blut- u. Stuhluntersuchungen</li>
         <li>Irisdiagnose</li>
         <li>Antlitzdiagnose</li>
-      </ul>
-    </div>
-    <div class="behandlung-card">
-      <h3 class="behandlung-title">Fastenkurse</h3>
-      <ul class="behandlung-list">
-        <li>Beginn jeden Donnerstag</li>
-        <li>Anmeldung erforderlich</li>
-      </ul>
-    </div>
-    <div class="behandlung-card">
-      <h3 class="behandlung-title">Erstkonsultation</h3>
-      <ul class="behandlung-list">
-        <li>Ausführliche Anamnese</li>
-        <li>Individuelle Therapieplanung</li>
       </ul>
     </div>
   </div>
