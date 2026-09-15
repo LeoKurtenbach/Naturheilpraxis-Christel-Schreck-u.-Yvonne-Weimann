@@ -229,9 +229,11 @@ section > * { position: relative; z-index: 1; }
 /* ── Team ── */
 #team { overflow: hidden; }
 #team::before { content: ''; position: absolute; inset: 0; background: rgba(238,234,224,0.95); pointer-events: none; }
-.team-intro { max-width: 600px; margin-bottom: clamp(2rem, 3.5vw, 3rem); position: relative; z-index: 1; }
-.team-photo-wrap { position: relative; z-index: 1; margin-bottom: clamp(2.5rem, 5vw, 4rem); }
-.team-photo { display: block; width: 100%; max-width: 580px; height: auto; object-fit: cover; aspect-ratio: 4/3; }
+.team-intro-wrap { display: grid; grid-template-columns: 1fr auto; gap: clamp(2rem, 4vw, 4rem); align-items: center; margin-bottom: clamp(2.5rem, 5vw, 4rem); position: relative; z-index: 1; }
+.team-intro { max-width: 560px; }
+.team-intro-photo { flex-shrink: 0; }
+.team-intro-photo img { display: block; width: 200px; height: 200px; object-fit: cover; object-position: center top; border-radius: 2px; }
+@media (max-width: 900px) { .team-intro-wrap { grid-template-columns: 1fr; } .team-intro-photo { display: none; } }
 .team-grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(1.25rem, 2vw, 2rem); align-items: start; position: relative; z-index: 1; }
 .team-card {
   background: var(--white);
@@ -401,26 +403,28 @@ footer { background: #0E0818; padding: 2.5rem clamp(1.5rem, 5vw, 5rem); display:
 </section>
 
 <section id="team">
-  <div class="team-intro">
-    <span class="section-overline">Über uns</span>
-    <h2 class="section-title gsap-fade">Zwei Heilpraktikerinnen. Ein gemeinsames Ziel.</h2>
-    <p class="section-body">In unserer Praxis im Amselweg 46 in Halle verbinden wir traditionelle Naturheilkunde mit jahrzehntelanger Erfahrung. Wir nehmen uns Zeit für Sie — für eine gründliche Anamnese und einen Behandlungsweg, der wirklich zu Ihnen passt.</p>
-  </div>
-  <div class="team-photo-wrap">
-    <img src="https://image.jimcdn.com/app/cms/image/transf/dimension=840x10000:format=png/path/sf3ba951adb7c230e/image/ib8e8fd0ce8c667f2/version/1491149636/image.png"
-         alt="Christel Schreck und Yvonne Weimann" class="team-photo" loading="lazy" width="840" height="630">
+  <div class="team-intro-wrap">
+    <div class="team-intro">
+      <span class="section-overline">Über uns</span>
+      <h2 class="section-title gsap-fade">Zwei Heilpraktikerinnen. Ein gemeinsames Ziel.</h2>
+      <p class="section-body">In unserer Praxis im Amselweg 46 in Halle verbinden wir traditionelle Naturheilkunde mit jahrzehntelanger Erfahrung. Wir nehmen uns Zeit für Sie — für eine gründliche Anamnese und einen Behandlungsweg, der wirklich zu Ihnen passt.</p>
+    </div>
+    <div class="team-intro-photo">
+      <img src="https://image.jimcdn.com/app/cms/image/transf/dimension=140x10000:format=jpg/path/sf3ba951adb7c230e/image/i3c98a5a808f5b855/version/1499419085/image.jpg"
+           alt="Christel Schreck und Yvonne Weimann" loading="lazy" width="200" height="200">
+    </div>
   </div>
   <div class="team-grid">
     <div class="team-card">
-      <div class="team-logo-wrap">
-        <img src="https://image.jimcdn.com/app/cms/image/transf/dimension=140x10000:format=jpg/path/sf3ba951adb7c230e/image/i3c98a5a808f5b855/version/1499419085/image.jpg"
-             alt="Christel Schreck" class="team-logo" loading="lazy" width="80" height="80">
-      </div>
       <h3 class="team-name">Christel Schreck</h3>
       <span class="team-role">Heilpraktikerin seit 1991</span>
       <p class="team-desc">3-jährige Ausbildung mit staatl. Anerkennung. Weiterbildung im In- und Ausland. Mitglied der ACON seit 1992 (Zusatzbezeichnung DO, CN). Referententätigkeit. Schwerpunkte: Osteopathie, Neuraltherapie, Chiropraxis, Akupunktur.</p>
     </div>
     <div class="team-card">
+      <div class="team-logo-wrap">
+        <img src="https://image.jimcdn.com/app/cms/image/transf/dimension=840x10000:format=png/path/sf3ba951adb7c230e/image/ib8e8fd0ce8c667f2/version/1491149636/image.png"
+             alt="Yvonne Weimann" class="team-logo" loading="lazy" width="80" height="80">
+      </div>
       <h3 class="team-name">Yvonne Weimann</h3>
       <span class="team-role">Heilpraktikerin seit 2011</span>
       <p class="team-desc">3-jährige Ausbildung mit staatl. Anerkennung. 2012 Fachausbildung Osteopathie. Ganzheitliche Betrachtung des Menschen — von der Ursache zur nachhaltigen Heilung.</p>
