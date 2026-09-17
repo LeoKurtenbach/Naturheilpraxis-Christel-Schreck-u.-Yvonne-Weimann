@@ -273,13 +273,16 @@ section > * { position: relative; z-index: 1; }
 .behandlung-list li::before { content: '·'; position: absolute; left: 0; color: var(--rose); font-size: 1.2em; line-height: 2.0; }
 
 /* ── Fastenkurse ── */
-#fastenkurse { }
-#fastenkurse::before { content: ''; position: absolute; inset: 0; background: rgba(8,6,3,0.87); pointer-events: none; }
-.fastenkurse-content { position: relative; z-index: 1; max-width: 720px; }
-.fastenkurse-content .section-title { color: var(--white); }
-.fastenkurse-content .section-body { color: rgba(255,255,255,0.88); max-width: 100%; }
-.fastenkurse-highlight { background: rgba(184,114,138,0.10); border-left: 2px solid var(--rose); padding: clamp(1.5rem, 2vw, 2rem) clamp(1.5rem, 2.5vw, 2.5rem); margin-top: 2.5rem; margin-bottom: 3rem; }
-.fastenkurse-highlight p { font-family: var(--font-serif); font-size: clamp(1.05rem, 1.5vw, 1.25rem); font-style: italic; color: rgba(255,255,255,0.92); line-height: 1.75; }
+#fastenkurse::before { content: ''; position: absolute; inset: 0; background: rgba(238,234,224,0.93); pointer-events: none; }
+#fastenkurse .section-overline { color: var(--rose-dark); }
+.fastenkurse-layout { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(3rem, 6vw, 7rem); align-items: center; position: relative; z-index: 1; }
+.fastenkurse-text .section-title { color: var(--deep); }
+.fastenkurse-text .section-body { color: var(--mid); max-width: 100%; }
+.fastenkurse-aside { position: relative; }
+.fastenkurse-highlight { border-top: 1px solid rgba(143,77,104,0.22); border-bottom: 1px solid rgba(143,77,104,0.22); padding: clamp(2rem, 3vw, 3rem) 0; }
+.fastenkurse-highlight p { font-family: var(--font-serif); font-size: clamp(1.2rem, 1.8vw, 1.55rem); font-style: italic; color: var(--deep); line-height: 1.7; margin-bottom: 1.75rem; }
+.fastenkurse-detail { font-size: clamp(0.95rem, 1.1vw, 1.1rem); color: var(--mid); line-height: 1.85; }
+@media (max-width: 900px) { .fastenkurse-layout { grid-template-columns: 1fr; } }
 
 /* ── Kontakt ── */
 #kontakt { background: var(--deep); }
@@ -441,38 +444,23 @@ footer { background: #0E0818; padding: 2.5rem clamp(1.5rem, 5vw, 5rem); display:
   </div>
   <div class="behandlung-grid">
     <div class="behandlung-card">
-      <h3 class="behandlung-title">Synergethische Behandlungen</h3>
+      <h3 class="behandlung-title">Therapieangebote</h3>
       <ul class="behandlung-list">
-        <li>Klassische Homöopathie</li>
+        <li>Klass. Homöopathie</li>
         <li>Phytotherapie (Pflanzenheilkunde)</li>
-        <li>Bachblütentherapie</li>
-        <li>Biochemie nach Dr. Schüßler</li>
-        <li>Fastenkuren</li>
-        <li>Kneipptherapien</li>
-      </ul>
-    </div>
-    <div class="behandlung-card">
-      <h3 class="behandlung-title">Physikalische Therapie</h3>
-      <ul class="behandlung-list">
         <li>Ausleitverfahren (Blutegel, Schröpfen, Baunscheidtieren)</li>
         <li>Colonhydrotherapie</li>
+        <li>Sanfte Wirbelsäulen- u. Gelenktherapie (Osteopathie, Chiropraktik, Faszienbehandlung)</li>
+        <li>Akupunktur, Bachblütentherapie, Biochemie nach Dr. Schüßler</li>
         <li>Sauerstoff- u. Ozontherapie</li>
         <li>Vitamin C Infusionen</li>
+        <li>Fastenkuren</li>
+        <li>Kneipptherapien</li>
         <li>Faltenunterspritzung</li>
       </ul>
     </div>
     <div class="behandlung-card">
-      <h3 class="behandlung-title">Manuelle &amp; Akupunktur-Therapie</h3>
-      <ul class="behandlung-list">
-        <li>Osteopathie</li>
-        <li>Chiropraktik</li>
-        <li>Faszienbehandlung</li>
-        <li>Akupunktur</li>
-        <li>Neuraltherapie</li>
-      </ul>
-    </div>
-    <div class="behandlung-card">
-      <h3 class="behandlung-title">Diagnostik</h3>
+      <h3 class="behandlung-title">Untersuchungen</h3>
       <ul class="behandlung-list">
         <li>Blut- u. Stuhluntersuchungen</li>
         <li>Irisdiagnose</li>
