@@ -14,9 +14,9 @@
 :root {
   --white: #FFFFFF;
   --off: #F5F3EE;
-  --rose: #B8728A;
-  --rose-dark: #8F4D68;
-  --rose-pale: #F7EEF2;
+  --rose: #C96B82;
+  --rose-dark: #A04560;
+  --rose-pale: #FAF0F3;
   --deep: #151210;
   --mid: #36302A;
   --muted: #7A7470;
@@ -148,7 +148,7 @@ nav.scrolled { box-shadow: 0 4px 28px rgba(21,18,16,0.10); }
 }
 .hero-overline {
   font-size: clamp(1.05rem, 1.35vw, 1.25rem); letter-spacing: 0.22em; text-transform: uppercase;
-  color: var(--rose); margin-bottom: 2.5rem; display: block; font-weight: 600;
+  color: rgba(255,220,225,0.92); margin-bottom: 2.5rem; display: block; font-weight: 600;
 }
 .hero-headline {
   font-family: var(--font-serif);
@@ -207,7 +207,7 @@ nav.scrolled { box-shadow: 0 4px 28px rgba(21,18,16,0.10); }
 /* ── Sections ── */
 section { padding: clamp(3.5rem, 7vw, 7rem) clamp(1.5rem, 5vw, 5rem); position: relative; }
 section > * { position: relative; z-index: 1; }
-.section-overline { font-size: clamp(1.05rem, 1.35vw, 1.5rem); letter-spacing: 0.18em; text-transform: uppercase; color: var(--rose); font-weight: 500; margin-bottom: 2rem; display: block; }
+.section-overline { font-size: clamp(1.05rem, 1.35vw, 1.5rem); letter-spacing: 0.18em; text-transform: uppercase; color: var(--rose-dark); font-weight: 500; margin-bottom: 2rem; display: block; }
 .section-title {
   font-family: var(--font-serif);
   font-size: clamp(2rem, 3.2vw, 3.8rem);
@@ -218,7 +218,7 @@ section > * { position: relative; z-index: 1; }
 
 /* ── Team ── */
 #team { overflow: hidden; }
-#team::before { content: ''; position: absolute; inset: 0; background: rgba(238,234,224,0.95); pointer-events: none; }
+#team::before { content: ''; position: absolute; inset: 0; background: rgba(245,238,228,0.88); pointer-events: none; }
 .team-intro-wrap { display: grid; grid-template-columns: 1fr auto; gap: clamp(2rem, 4vw, 4rem); align-items: center; margin-bottom: clamp(2.5rem, 5vw, 4rem); position: relative; z-index: 1; }
 .team-intro { max-width: 560px; }
 .team-intro-photo { flex-shrink: 0; }
@@ -241,7 +241,7 @@ section > * { position: relative; z-index: 1; }
 
 /* ── Behandlungen ── */
 #behandlungen { overflow: hidden; }
-#behandlungen::before { content: ''; position: absolute; inset: 0; background: rgba(8,6,3,0.82); pointer-events: none; }
+#behandlungen::before { content: ''; position: absolute; inset: 0; background: rgba(28,16,8,0.84); pointer-events: none; }
 #behandlungen .section-overline { color: var(--rose-pale); }
 #fastenkurse .section-overline { color: var(--rose-pale); }
 #behandlungen .section-title { color: var(--white); }
@@ -262,7 +262,7 @@ section > * { position: relative; z-index: 1; }
 .behandlung-list li::before { content: '·'; position: absolute; left: 0; color: var(--rose); font-size: 1.2em; line-height: 2.0; }
 
 /* ── Fastenkurse ── */
-#fastenkurse::before { content: ''; position: absolute; inset: 0; background: rgba(238,234,224,0.93); pointer-events: none; }
+#fastenkurse::before { content: ''; position: absolute; inset: 0; background: rgba(245,238,228,0.88); pointer-events: none; }
 #fastenkurse .section-overline { color: var(--rose-dark); }
 .fastenkurse-layout { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(3rem, 6vw, 7rem); align-items: center; position: relative; z-index: 1; }
 .fastenkurse-text .section-title { color: var(--deep); }
@@ -274,7 +274,8 @@ section > * { position: relative; z-index: 1; }
 @media (max-width: 900px) { .fastenkurse-layout { grid-template-columns: 1fr; } }
 
 /* ── Kontakt ── */
-#kontakt { background: var(--deep); }
+#kontakt { }
+#kontakt::before { content: ''; position: absolute; inset: 0; background: rgba(28,16,8,0.88); pointer-events: none; }
 .kontakt-grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(3rem, 6vw, 6rem); align-items: start; }
 .kontakt-info .section-title { color: var(--white); text-shadow: none; }
 .kontakt-info .section-body { color: rgba(255,255,255,0.72); }
