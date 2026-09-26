@@ -143,28 +143,28 @@ nav.scrolled { box-shadow: 0 4px 28px rgba(21,18,16,0.10); }
 .hero-content {
   position: relative; z-index: 1;
   width: 100%;
-  padding: 0 clamp(1.5rem, 5vw, 5rem) clamp(3.5rem, 5vw, 5.5rem);
+  padding: 0 clamp(1.5rem, 5vw, 5rem) clamp(2rem, 3.5vw, 4rem);
   display: flex; flex-direction: column;
 }
 .hero-overline {
-  font-size: clamp(1rem, 1.25vw, 1.15rem); letter-spacing: 0.22em; text-transform: uppercase;
+  font-size: clamp(1.05rem, 1.35vw, 1.25rem); letter-spacing: 0.22em; text-transform: uppercase;
   color: var(--rose); margin-bottom: 2.5rem; display: block; font-weight: 600;
 }
 .hero-headline {
   font-family: var(--font-serif);
-  font-size: clamp(3rem, 4.5vw, 5.5rem);
-  font-weight: 400; line-height: 1.08; letter-spacing: -0.025em;
-  color: var(--white); margin-bottom: 2.75rem; max-width: 740px;
+  font-size: clamp(3.2rem, 5.2vw, 6.5rem);
+  font-weight: 400; line-height: 1.06; letter-spacing: -0.025em;
+  color: var(--white); margin-bottom: 3rem; max-width: 820px;
   text-shadow: 0 2px 20px rgba(0,0,0,0.50);
 }
 .hero-sub {
-  font-size: clamp(1.1rem, 1.4vw, 1.25rem);
-  color: rgba(255,255,255,0.90); line-height: 1.82; max-width: 540px; margin-bottom: 3rem;
+  font-size: clamp(1.15rem, 1.55vw, 1.4rem);
+  color: rgba(255,255,255,0.90); line-height: 1.82; max-width: 580px; margin-bottom: 3rem;
 }
 .hero-quote {
   font-family: var(--font-serif); font-style: italic;
-  font-size: clamp(0.95rem, 1.1vw, 1.05rem);
-  color: rgba(255,255,255,0.75); margin-bottom: 3rem; max-width: 460px; line-height: 1.75;
+  font-size: clamp(1rem, 1.2vw, 1.15rem);
+  color: rgba(255,255,255,0.75); margin-bottom: 3rem; max-width: 500px; line-height: 1.75;
 }
 .hero-actions {
   display: flex; gap: 1.25rem; align-items: center; flex-wrap: wrap;
@@ -176,7 +176,7 @@ nav.scrolled { box-shadow: 0 4px 28px rgba(21,18,16,0.10); }
   border-top: 1px solid rgba(255,255,255,0.16); padding-top: 1.75rem;
 }
 .tag {
-  font-size: clamp(0.9rem, 1.05vw, 1.05rem); letter-spacing: 0.14em; text-transform: uppercase;
+  font-size: clamp(0.95rem, 1.1vw, 1.15rem); letter-spacing: 0.14em; text-transform: uppercase;
   color: rgba(255,255,255,0.82); font-weight: 500; text-decoration: none;
   transition: color var(--dur-ui) var(--ease-organic);
 }
@@ -207,14 +207,14 @@ nav.scrolled { box-shadow: 0 4px 28px rgba(21,18,16,0.10); }
 /* ── Sections ── */
 section { padding: clamp(3.5rem, 7vw, 7rem) clamp(1.5rem, 5vw, 5rem); position: relative; }
 section > * { position: relative; z-index: 1; }
-.section-overline { font-size: clamp(1rem, 1.3vw, 1.4rem); letter-spacing: 0.18em; text-transform: uppercase; color: var(--rose); font-weight: 500; margin-bottom: 2rem; display: block; }
+.section-overline { font-size: clamp(1.05rem, 1.35vw, 1.5rem); letter-spacing: 0.18em; text-transform: uppercase; color: var(--rose); font-weight: 500; margin-bottom: 2rem; display: block; }
 .section-title {
   font-family: var(--font-serif);
-  font-size: clamp(1.8rem, 2.8vw, 3.2rem);
-  font-weight: 400; line-height: 1.12; letter-spacing: -0.01em;
+  font-size: clamp(2rem, 3.2vw, 3.8rem);
+  font-weight: 400; line-height: 1.1; letter-spacing: -0.01em;
   color: var(--deep); margin-bottom: 2.5rem;
 }
-.section-body { font-size: clamp(1rem, 1.3vw, 1.2rem); color: var(--mid); line-height: 1.95; max-width: 560px; }
+.section-body { font-size: clamp(1.05rem, 1.4vw, 1.3rem); color: var(--mid); line-height: 1.95; max-width: 580px; }
 
 /* ── Team ── */
 #team { overflow: hidden; }
