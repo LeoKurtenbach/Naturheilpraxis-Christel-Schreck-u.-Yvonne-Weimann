@@ -112,7 +112,6 @@ nav.scrolled { box-shadow: 0 4px 28px rgba(21,18,16,0.10); }
   display: flex; align-items: center; justify-content: center;
   width: 100%; text-align: center;
   letter-spacing: 0.01em;
-  border-bottom: 1px solid rgba(21,18,16,0.06);
   transition: color var(--dur-ui);
 }
 .nav-mobile-menu a:hover { color: var(--rose); }
@@ -173,7 +172,7 @@ nav.scrolled { box-shadow: 0 4px 28px rgba(21,18,16,0.10); }
 .hero-tags {
   display: flex; align-items: center; flex-wrap: wrap; justify-content: center;
   align-self: center; width: 100%; max-width: 800px;
-  border-top: 1px solid rgba(255,255,255,0.16); padding-top: 1.75rem;
+  padding-top: 0.5rem;
 }
 .tag {
   font-size: clamp(0.95rem, 1.1vw, 1.15rem); letter-spacing: 0.14em; text-transform: uppercase;
@@ -273,7 +272,7 @@ section > * { position: relative; z-index: 1; }
 .fastenkurse-text .section-title { color: var(--deep); }
 .fastenkurse-text .section-body { color: var(--mid); max-width: 100%; }
 .fastenkurse-aside { position: relative; }
-.fastenkurse-highlight { border-top: 1px solid rgba(143,77,104,0.22); border-bottom: 1px solid rgba(143,77,104,0.22); padding: clamp(2rem, 3vw, 3rem) 0; }
+.fastenkurse-highlight { border-left: 3px solid var(--rose); padding: 0.4rem 0 0.4rem 1.75rem; }
 .fastenkurse-highlight p { font-family: var(--font-serif); font-size: clamp(1.2rem, 1.8vw, 1.55rem); font-style: italic; color: var(--deep); line-height: 1.7; margin-bottom: 1.75rem; }
 .fastenkurse-detail { font-size: clamp(0.95rem, 1.1vw, 1.1rem); color: var(--mid); line-height: 1.85; }
 @media (max-width: 900px) { .fastenkurse-layout { grid-template-columns: 1fr; } }
